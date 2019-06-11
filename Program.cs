@@ -38,7 +38,7 @@ namespace Lesson5_Books
             Console.WriteLine(oreilly);
             Console.WriteLine();
 
-            Book cSharp = new Book("C# для чайников", new Author[] { joseph, ben }, 712, "eng", 2017, oreilly);
+            Book cSharp = new Book("C# 7.0 Карманный справочник", new Author[] { joseph, ben }, 712, "eng", 2017, oreilly);
             Console.WriteLine(cSharp);
             Console.WriteLine();
 

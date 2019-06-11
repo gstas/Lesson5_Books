@@ -40,12 +40,12 @@ namespace Lesson5_Books
 
         public override string ToString()
         {
-            string a = "", result = $"Книга: {Name}, Кол-во страниц: {Pages}, Язык: {Lang}\nАвтор(ы): ";
+            string authorNames = "", result = $"Книга: {Name}, Кол-во страниц: {Pages}, Язык: {Lang}\nАвтор(ы): ";
             foreach (var author in Authors)
             {
-                a += (a == "") ? author.Name : ", " + author.Name;
+                authorNames += (authorNames == "") ? author.Name : ", " + author.Name;
             }
-            result += a;
+            result += authorNames;
 
             result += (Year != 0) ? $"\nГод издания: {Year}" : "";
             result += (Publisher != null) ? $"\nИздательство: {Publisher.Name}" : "";
