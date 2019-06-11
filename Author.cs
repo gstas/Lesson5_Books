@@ -36,7 +36,7 @@ namespace Lesson5_Books
         public override string ToString()
         {
             string result = $"Автор: {Name}";
-            if (Birthday != null && Convert.ToString(Birthday) != "" && Birthday.Year != 1)
+            if (Birthday != DateTime.MinValue)
                 result += $", родился: {Birthday.ToShortDateString()}";
             if (Country != null && Country != "")
                 result += $", страна: { Country}";
