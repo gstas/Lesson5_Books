@@ -9,10 +9,7 @@ namespace Lesson5_Books
     class Publisher
     {
         // Издательство (3-4 основных поля, свойства (сеттеры и геттеры для каждого поля), несколько видов конструкторов, переопределить метод ToString())
-        string name;
-        string country;
-        string address;
-        string web;
+        string name, country, address, web;
 
         public string Name { get => name; set => name = value.Trim(); }
         public string Country { get => country; set => country = value.Trim(); }

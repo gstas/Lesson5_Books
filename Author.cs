@@ -1,17 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson5_Books
 {
     class Author
     {
         // Автор (2-3 основных поля, свойства (сеттеры и геттеры для каждого поля), несколько видов конструкторов, переопределить метод ToString())
-        string name;
+        string name, country;
         DateTime birthday;
-        string country;
+
+        public string Name { get => name; set => name = value.Trim(); }
+        public DateTime Birthday
+        {
+            get => birthday;
+            set => birthday = birthday > DateTime.Now ? DateTime.Now : value;
+        }
+        public string Country { get => country; set => country = value.Trim(); }
 
         public Author(string name)
         {
@@ -28,13 +31,7 @@ namespace Lesson5_Books
             Country = country;
         }
 
-        public string Name { get => name; set => name = value.Trim(); }
-        public DateTime Birthday
-        {
-            get => birthday;
-            set => birthday = birthday > DateTime.Now ? DateTime.Now : value;
-        }
-        public string Country { get => country; set => country = value.Trim(); }
+        
 
         public override string ToString()
         {

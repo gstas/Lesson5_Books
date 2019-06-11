@@ -20,10 +20,28 @@ namespace Lesson5_Books
             Console.WriteLine();
 
             Publisher alphabet = new Publisher("Азбука", "Россия");
-            Publisher eksmo = new Publisher("Эксмо", "Россия", "www.eksmo.ru");
             Console.WriteLine(alphabet);
-            Console.WriteLine(eksmo);
             Console.WriteLine();
+
+            Book starWars = new Book("Star Wars", new Author[] {james, george, donald}, 500, "рус");
+            Console.WriteLine(starWars);
+            Console.WriteLine();
+
+
+            Author joseph = new Author("Джозеф Албахари");
+            Author ben = new Author("Бен Албахари", DateTime.Parse("25.11.1976"));
+            Console.WriteLine(joseph);
+            Console.WriteLine(ben);
+            Console.WriteLine();
+
+            Publisher oreilly = new Publisher("O'Reilly", "USA", "www.oreilly.com", "1005 Gravenstein Highway NorthSebastopol, CA 95472 USA");
+            Console.WriteLine(oreilly);
+            Console.WriteLine();
+
+            Book cSharp = new Book("C# для чайников", new Author[] { joseph, ben }, 712, "eng", 2017, oreilly);
+            Console.WriteLine(cSharp);
+            Console.WriteLine();
+
         }
     }
 }
